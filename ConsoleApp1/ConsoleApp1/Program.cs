@@ -1,6 +1,21 @@
-﻿//jiujiji
-
-for (int i = 1; i <= 5; i++)
+﻿class Program
 {
-    Console.WriteLine($"Iteration {i}");
+    static void Main()
+    {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        double average = CalculateAverage(numbers);
+        Console.WriteLine($"Average: {average}");
+    }
+
+    static double CalculateAverage(int[] numbers)
+    {
+        if (numbers.Length == 0) return 0;
+        
+        double sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
+        }
+        return sum / numbers.Length;
+    }
 }
